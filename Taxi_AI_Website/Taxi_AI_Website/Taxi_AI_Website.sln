@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Taxi_AI_Website", "Taxi_AI_Website\Taxi_AI_Website.csproj", "{F877009A-7333-4AD8-8815-6E6A0DD4994D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F877009A-7333-4AD8-8815-6E6A0DD4994D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F877009A-7333-4AD8-8815-6E6A0DD4994D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F877009A-7333-4AD8-8815-6E6A0DD4994D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F877009A-7333-4AD8-8815-6E6A0DD4994D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {462D45CD-EC71-4259-8C78-47037F5534AA}
+	EndGlobalSection
+EndGlobal
