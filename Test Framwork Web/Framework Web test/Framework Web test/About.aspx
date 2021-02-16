@@ -1,8 +1,0 @@
-﻿<%@ Page Title="About" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="About.aspx.vb" Inherits="Framework_Web_test.About" %>
-
-<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
-    <p>Your app description page.<asp:Image ID="Image1" runat="server" />
-    </p>
-    <p>Use this area to provide additional information.</p>
-</asp:Content>
