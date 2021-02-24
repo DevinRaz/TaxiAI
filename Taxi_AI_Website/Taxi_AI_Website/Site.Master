@@ -53,6 +53,9 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
+                            <li><a runat="server" href="~/Parts">Parts</a></li>
+                            <li><a runat="server" href="~/Cars">Cars</a></li>
+                            <li><a runat="server" href="~/Locations">Locations</a></li>
                     </ul>
                 </div>
             </div>
