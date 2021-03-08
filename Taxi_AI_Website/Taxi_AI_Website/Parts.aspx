@@ -9,12 +9,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            Model<asp:CheckBoxList ID="CheckBoxList1" runat="server">
+            Model<asp:RadioButtonList ID="RadioButtonList1" runat="server">
                 <asp:ListItem>S</asp:ListItem>
                 <asp:ListItem>3</asp:ListItem>
                 <asp:ListItem>X</asp:ListItem>
                 <asp:ListItem>Y</asp:ListItem>
-            </asp:CheckBoxList>
+            </asp:RadioButtonList>
             <br />
             <asp:TreeView ID="TreeView1" runat="server" ImageSet="Arrows">
                 <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
