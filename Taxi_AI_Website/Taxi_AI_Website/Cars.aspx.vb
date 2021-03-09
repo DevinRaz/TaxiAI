@@ -12,12 +12,14 @@
             Label2.Text = ""
             Label3.Text = ""
             Label4.Text = ""
+            imgCar.Visible = False
         Else
             Label1.Text = "Make:" & FoundCar.Make
             Label2.Text = "Model:" & FoundCar.Model
             Label3.Text = "Plate:" & FoundCar.Plate
             Label4.Text = "Color:" & FoundCar.Color
-            Label4.BackColor = System.Drawing.Color.FromName(FoundCar.Color)
+            imgCar.BackColor = System.Drawing.Color.FromName(FoundCar.Color)
+            imgCar.Visible = True
         End If
 
     End Sub

@@ -32,6 +32,15 @@ Partial Public Class Cars
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
+    '''imgCar control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents imgCar As Global.System.Web.UI.WebControls.Image
+
+    '''<summary>
     '''Panel1 control.
     '''</summary>
     '''<remarks>
