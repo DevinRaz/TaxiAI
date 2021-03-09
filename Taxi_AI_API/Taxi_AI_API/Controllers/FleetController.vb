@@ -26,15 +26,15 @@ Namespace Controllers
                 Next
             End If
 
-            Dim json As String = "{"
+            Dim json As String = "{'Vehicles':[{"
 
             For Each cval In CarVals
-                json &= """" & cval.Key & """:""" & cval.Value & ""","
+                json &= "'" & cval.Key & "':'" & cval.Value & "',"
             Next
 
             json = json.Substring(0, json.Length - 1)
 
-            json &= "}"
+            json &= "}]}"
 
             Return json
         End Function

@@ -4,7 +4,7 @@ Imports System.Text
 Imports Newtonsoft.Json
 Imports Newtonsoft.Json.Linq
 
-Public Class TaxiREST
+Public Class Client
 
 
     Public Function GetCarFromID(ID As String) As Vehicle
