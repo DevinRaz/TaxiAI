@@ -18,6 +18,11 @@
             Label2.Text = "Model:" & FoundCar.Model
             Label3.Text = "Plate:" & FoundCar.Plate
             Label4.Text = "Color:" & FoundCar.Color
+            If FoundCar.Model = "Model 3" Then
+                imgCar.ImageUrl = "Images/Model3-Trans.png"
+            ElseIf FoundCar.Model = "Model S" Then
+                imgCar.ImageUrl = "Images/ModelS-Trans.png"
+            End If
             imgCar.BackColor = System.Drawing.Color.FromName(FoundCar.Color)
             imgCar.Visible = True
         End If
