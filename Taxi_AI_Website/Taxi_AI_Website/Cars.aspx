@@ -8,7 +8,7 @@
         <asp:Button ID="Button1" runat="server" Text="Get" />
     </h2>
     <p>
-        <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="486px" />
+        <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="558px" />
     </p>
     <asp:Panel ID="Panel1" runat="server" Height="105px">
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
