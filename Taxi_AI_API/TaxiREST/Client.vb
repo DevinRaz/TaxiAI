@@ -14,13 +14,20 @@ Public Class Client
 
 
     Public Function JSONtoVehicle(JSON As String) As Vehicle
-        Dim testjson As String = <json>{'Vehicles':[{'id':'1','vin':'test','make':'Tesla','model':'Model S','color':'Black','plate':'TaxiAI','location':'Clarkston, MI','battery':'100','status':'Ready','odometer':'11111.11'}]}</json>
+        Dim Empty As String = "{'Vehicles':[}]}"
+        JSON = JSON.Replace("""", "")
 
-        Dim result = JsonConvert.DeserializeObject(testjson)
+        If JSON = Empty Then
+            Return Nothing
+        End If
+
+        Dim result = JsonConvert.DeserializeObject(JSON)
 
         Dim rescar = result("Vehicles")(0)
 
         Dim retCar As New Vehicle(rescar("id"), rescar("vin"), rescar("make"), rescar("model"), rescar("color"), rescar("plate"), rescar("location"), rescar("battery"), rescar("status"), rescar("odometer"))
+
+        Return retCar
     End Function
 
 
@@ -55,16 +62,16 @@ Public Class Client
     End Function
 
     Class Vehicle
-        Public Property _ID As Integer
-        Public Property _VIN As String
-        Public Property _Make As String
-        Public Property _Model As String
-        Public Property _Color As String
-        Public Property _Plate As String
-        Public Property _Battery As Decimal
-        Public Property _Location As String
-        Public Property _Status As String
-        Public Property _Odometer As Double
+        Public Property ID As Integer
+        Public Property VIN As String
+        Public Property Make As String
+        Public Property Model As String
+        Public Property Color As String
+        Public Property Plate As String
+        Public Property Battery As Decimal
+        Public Property Location As String
+        Public Property Status As String
+        Public Property Odometer As Double
         Sub New(id, vin, make, model, color, plate, location, battery, status, odometer)
             _ID = id
             _VIN = vin

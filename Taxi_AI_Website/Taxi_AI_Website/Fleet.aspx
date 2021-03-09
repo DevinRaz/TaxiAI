@@ -1,15 +1,7 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Fleet.aspx.vb" Inherits="Taxi_AI_Website.Fleet" %>
+﻿<%@ Page Title="Fleet" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Fleet.aspx.vb" Inherits="Taxi_AI_Website.About" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
-        </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h2><%: Title %>.</h2>
+    <p>Your app description page.</p>
+    <p>Use this area to provide additional information.</p>
+</asp:Content>
