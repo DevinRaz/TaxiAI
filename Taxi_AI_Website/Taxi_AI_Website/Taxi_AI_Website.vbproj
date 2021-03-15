@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Images\Model3-Trans.png" />
     <Content Include="Images\Model3.png" />
     <Content Include="Images\ModelS.png" />
     <Content Include="Images\ModelX.png" />
@@ -158,7 +159,6 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
-    <Content Include="Images\Model3-Trans.png" />
     <Content Include="Images\ModelS-Trans.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
