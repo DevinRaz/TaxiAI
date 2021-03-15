@@ -1,14 +1,17 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="Parts.aspx.vb" Inherits="Taxi_AI_Website.Parts" %>
+﻿<%@ Page Title="Parts" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Parts.aspx.vb" Inherits="Taxi_AI_Website.Parts" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-        <div>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h2><%: Title %>.</h2>
+    <h2>Seach using TaxiD</h2>
+    <h2>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" Text="Get" />
+    </h2>
+    <p>
+        <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="558px" />
+    </p>
+    <asp:Panel ID="Panel1" runat="server" Height="105px">
+    <div>
             Model<asp:RadioButtonList ID="RadioButtonList1" runat="server">
                 <asp:ListItem>S</asp:ListItem>
                 <asp:ListItem>3</asp:ListItem>
@@ -85,6 +88,8 @@
                 <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
             </asp:TreeView>
         </div>
-    </form>
-</body>
-</html>
+          
+    </asp:Panel>
+    <p>Your app description page.</p>
+    <p>Use this area to provide additional information.</p>
+</asp:Content>
