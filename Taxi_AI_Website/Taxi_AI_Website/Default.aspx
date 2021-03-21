@@ -23,7 +23,7 @@
 
 
     <h1 style="text-align:center; display:inline-block; width: 99%; font-weight:bold">Location</h1>
-    <h3 style="text-align:center; display:inline-block; width: 99%;">You can find a list of our shop locations on our <a href="Location.aspx">Location</a> page.</h3>
+    <h3 style="text-align:center; display:inline-block; width: 99%;">You can find a list of our shop locations on our <a href="Locations.aspx">Locations</a> page.</h3>
     <p style="text-align:center; display:inline-block; width: 99%;">We are headquatered in Rochester on Taxi Avenue and Meadow Brook Road</p>
     <address style="text-align:center; display:inline-block; width: 99%;"> 318 Meadow Brook Rd, Rochester, MI 48309</address>
     <br />
