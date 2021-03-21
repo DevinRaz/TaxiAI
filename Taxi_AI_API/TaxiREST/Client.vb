@@ -46,15 +46,6 @@ Public Class Client
             Dim sr As New StreamReader(Stream, Encoding.GetEncoding("utf-8"))
             Dim str As String = sr.ReadToEnd()
             Return str
-            '       Dim FollowerCount As JValue = JObject.Parse(str)("total")
-            '       UpdateTotalFollowers(FollowerCount)
-            '
-            '       Dim Followers As JArray = JObject.Parse(str)("data")
-            '
-            '       Dim NewFollower As New Alert("Follower", {"user", Followers.First("from_name")})
-            '       If AlertList IsNot Nothing Then
-            '           AlertList.Add(NewFollower)
-            '       End If
         Catch ex As WebException
             Console.WriteLine(ex.Message)
             Return ex.Message
