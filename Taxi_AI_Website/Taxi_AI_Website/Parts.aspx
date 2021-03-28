@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="Parts" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Parts.aspx.vb" Inherits="Taxi_AI_Website.Parts" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %>.</h2>
+    <div style="position: fixed; left:40%; width= 60%">
+     <br />
+    <h2><%: Title %>Parts</h2>
     <h2>Seach using TaxiD</h2>
     <h2>
         <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
@@ -10,9 +12,14 @@
     <p>
         <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="558px" />
     </p>
+        <p>Your app description page.</p>
+    <p>Use this area to provide additional information.</p>
+    </div>
+    <div style="position: fixed; right: 65%; width=30%;">
+        <br />
     <asp:Panel ID="Panel1" runat="server" Height="105px">
-    <div>
-            Model<asp:RadioButtonList ID="RadioButtonList1" runat="server">
+    <label>Model</label>
+            <asp:RadioButtonList ID="RadioButtonList1" runat="server">
                 <asp:ListItem>S</asp:ListItem>
                 <asp:ListItem>3</asp:ListItem>
                 <asp:ListItem>X</asp:ListItem>
@@ -27,14 +34,6 @@
                             <asp:TreeNode Text="Air Filters" Value="Air Filters"></asp:TreeNode>
                         </asp:TreeNode>
                     </asp:TreeNode>
-                </Nodes>
-                <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
-                <ParentNodeStyle Font-Bold="False" />
-                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
-            </asp:TreeView>
-            <asp:TreeView ID="TreeView2" runat="server" ImageSet="Arrows">
-                <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
-                <Nodes>
                     <asp:TreeNode Text="Accessories, Body, &amp; Wipers" Value="Accessories, Body, &amp; Wipers">
                         <asp:TreeNode Text="Accessories" Value="Accessories">
                             <asp:TreeNode Text="(coming soon)" Value="(coming soon)"></asp:TreeNode>
@@ -46,14 +45,6 @@
                             </asp:TreeNode>
                         </asp:TreeNode>
                     </asp:TreeNode>
-                </Nodes>
-                <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
-                <ParentNodeStyle Font-Bold="False" />
-                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
-            </asp:TreeView>
-            <asp:TreeView ID="TreeView3" runat="server" ImageSet="Arrows">
-                <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
-                <Nodes>
                     <asp:TreeNode Text="Electrical" Value="Electrical">
                         <asp:TreeNode Text="Lights" Value="Lights">
                             <asp:TreeNode Text="Front Lights" Value="Front Lights"></asp:TreeNode>
@@ -67,14 +58,6 @@
                             <asp:TreeNode Text="Turn/Fog Light" Value="Turn/Fog Light"></asp:TreeNode>
                         </asp:TreeNode>
                     </asp:TreeNode>
-                </Nodes>
-                <NodeStyle Font-Names="Tahoma" Font-Size="10pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
-                <ParentNodeStyle Font-Bold="False" />
-                <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
-            </asp:TreeView>
-            <asp:TreeView ID="TreeView4" runat="server" ImageSet="Arrows">
-                <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
-                <Nodes>
                     <asp:TreeNode Text="Brakes, Steering, Suspension" Value="Brakes, Steering, Suspension">
                         <asp:TreeNode Text="Brakes" Value="Brakes">
                             <asp:TreeNode Text="Rotors" Value="Rotors"></asp:TreeNode>
@@ -87,9 +70,9 @@
                 <ParentNodeStyle Font-Bold="False" />
                 <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
             </asp:TreeView>
-        </div>
+        
           
     </asp:Panel>
-    <p>Your app description page.</p>
-    <p>Use this area to provide additional information.</p>
+</div>
+
 </asp:Content>
