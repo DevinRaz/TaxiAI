@@ -132,6 +132,8 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Images\AubrunHillsMap.jpg" />
+    <Content Include="Images\Auto_Center.jpg" />
+    <Content Include="Images\Detailing.jpg" />
     <Content Include="Images\Model3-Trans.png" />
     <Content Include="Images\Model3.png" />
     <Content Include="Images\ModelS.png" />
