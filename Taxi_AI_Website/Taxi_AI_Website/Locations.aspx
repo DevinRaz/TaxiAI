@@ -7,7 +7,8 @@
     >318 Meadow Brook Rd, Rochester, MI 48309</a> Here is where we develop and test our applications. </p> <br />
     <img src="https://images.adsttc.com/media/images/57b8/ce0d/e58e/cea5/7b00/0304/large_jpg/Oakland_University_SGJJR_Submittal_01_Images_1OaklandUnivEngCtr_20042.jpg?1471729158" alt="Alternate Text" width="100%"  height="50% style="margin-top:100px"/> <br />
 
-    <img src="Images/AubrunHillsMap.jpg" alt="Alternate Text" width="100%"  height="50% style="margin-top:100px"/>
+    <iframe src="https://www.google.com/maps/d/embed?mid=1llxg4e-sNyfjcB64obOddb3iBGq1Iy0O&hl=en" style="height: 781px; width: 1515px"></iframe>
+
 
     <hr />
 
