@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Parts" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Parts.aspx.vb" Inherits="Taxi_AI_Website.Parts" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div style="position: fixed; left:40%; width= 60%">
+    <div style="width= 60%">
      <br />
     <h2><%: Title %>Parts</h2>
     <h2>Seach using TaxiD</h2>
@@ -15,7 +15,7 @@
         <p>Your app description page.</p>
     <p>Use this area to provide additional information.</p>
     </div>
-    <div style="position: fixed; right: 65%; width=30%;">
+    <div style="width=30%;">
         <br />
     <asp:Panel ID="Panel1" runat="server" Height="105px">
     <label>Model</label>
