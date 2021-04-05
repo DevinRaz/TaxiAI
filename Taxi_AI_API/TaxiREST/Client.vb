@@ -12,6 +12,13 @@ Public Class Client
         Return JSONtoVehicle(Value)
     End Function
 
+    Public Function GetPartFromID(ID As String) As Part
+        Dim Value As String = RESTGet("http://taxiai.razberry.network:2999/api/parts/" & ID)
+        Return JSONtoPart(Value)
+    End Function
+
+
+
 
     Public Function JSONtoVehicle(JSON As String) As Vehicle
         Dim Empty As String = "{'Vehicles':[}]}"
@@ -26,6 +33,23 @@ Public Class Client
         Dim rescar = result("Vehicles")(0)
 
         Dim retCar As New Vehicle(rescar("id"), rescar("vin"), rescar("make"), rescar("model"), rescar("color"), rescar("plate"), rescar("location"), rescar("battery"), rescar("status"), rescar("odometer"))
+
+        Return retCar
+    End Function
+
+
+    Public Function JSONtoPart(JSON As String) As Part
+        Dim Empty As String = "{'Parts':[}]}"
+        JSON = JSON.Replace("""", "")
+
+        If JSON = Empty Then
+            Return Nothing
+        End If
+
+        Dim result = JsonConvert.DeserializeObject(JSON)
+
+        Dim rescar = result("Parts")(0)
+        Dim retCar As New Part(rescar("part_id"), rescar("part_summary"), rescar("part_description"), rescar("compatible_model"), rescar("manufacturer"))
 
         Return retCar
     End Function
@@ -84,7 +108,19 @@ Public Class Client
     End Class
 
     Class Part
+        Public Property ID As Integer
+        Public Property Summary As String
+        Public Property Description As String
+        Public Property Manufactuerer As String
+        Public Property Models As String
 
+        Sub New(id, sum, desc, model, mfg)
+            _ID = id
+            _Summary = sum
+            _Description = desc
+            _Models = model
+            _Manufactuerer = mfg
+        End Sub
     End Class
 
 End Class

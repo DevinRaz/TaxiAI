@@ -1,6 +1,6 @@
 ﻿Imports System.Net
 Imports System.Web.Http
-
+Imports Taxi_AI_DB
 Namespace Controllers
     Public Class LocationController
         Inherits ApiController
@@ -11,8 +11,32 @@ Namespace Controllers
         End Function
 
         ' GET: api/Location/5
-        Public Function GetValue(ByVal id As Integer) As String
-            Return "value"
+        Public Function GetValue(ByVal id As String) As String
+            Dim TaxiAI As New TaxiDB("TaxiAPI", "vjM9vo9HYh^D9$*D")
+
+            '    Dim CarInfo() As IEnumerable(Of String)
+
+            Dim temp As DataTable = TaxiAI.QueryRetDT(Queries.GetPartInfo(id))
+
+            Dim PartVals As New Dictionary(Of String, String)
+
+            If temp.Rows.Count >= 1 Then
+                For Each col As DataColumn In temp.Columns
+                    PartVals.Add(col.ColumnName, temp.Rows.Item(0).Item(col))
+                Next
+            End If
+
+            Dim json As String = "{'Parts':[{"
+
+            For Each cval In PartVals
+                json &= "'" & cval.Key & "':'" & cval.Value & "',"
+            Next
+
+            json = json.Substring(0, json.Length - 1)
+
+            json &= "}]}"
+
+            Return json
         End Function
 
         ' POST: api/Location
