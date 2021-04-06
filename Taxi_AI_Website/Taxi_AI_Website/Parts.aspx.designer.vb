@@ -14,6 +14,24 @@ Option Explicit On
 Partial Public Class Parts
 
     '''<summary>
+    '''RadioButtonList1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
+
+    '''<summary>
+    '''TreeView1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents TreeView1 As Global.System.Web.UI.WebControls.TreeView
+
+    '''<summary>
     '''TextBox1 control.
     '''</summary>
     '''<remarks>
@@ -39,58 +57,4 @@ Partial Public Class Parts
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents imgCar As Global.System.Web.UI.WebControls.Image
-
-    '''<summary>
-    '''Panel1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents Panel1 As Global.System.Web.UI.WebControls.Panel
-
-    '''<summary>
-    '''RadioButtonList1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents RadioButtonList1 As Global.System.Web.UI.WebControls.RadioButtonList
-
-    '''<summary>
-    '''TreeView1 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TreeView1 As Global.System.Web.UI.WebControls.TreeView
-
-    '''<summary>
-    '''TreeView2 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TreeView2 As Global.System.Web.UI.WebControls.TreeView
-
-    '''<summary>
-    '''TreeView3 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TreeView3 As Global.System.Web.UI.WebControls.TreeView
-
-    '''<summary>
-    '''TreeView4 control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents TreeView4 As Global.System.Web.UI.WebControls.TreeView
 End Class

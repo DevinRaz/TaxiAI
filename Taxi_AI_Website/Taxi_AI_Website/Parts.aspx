@@ -1,23 +1,12 @@
 ﻿<%@ Page Title="Parts" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Parts.aspx.vb" Inherits="Taxi_AI_Website.Parts" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div style="width= 60%">
-     <br />
-    <h2><%: Title %>Parts</h2>
-    <h2>Seach using TaxiD</h2>
-    <h2>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Get" />
-    </h2>
-    <p>
-        <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="558px" />
-    </p>
-        <p>Your app description page.</p>
-    <p>Use this area to provide additional information.</p>
-    </div>
-    <div style="width=30%;">
+      <h2><%: Title %></h2>
+    <div style="height:700px">
+
+    <div style="width=30%;float:left">
         <br />
-    <asp:Panel ID="Panel1" runat="server" Height="105px">
+
     <label>Model</label>
             <asp:RadioButtonList ID="RadioButtonList1" runat="server">
                 <asp:ListItem>S</asp:ListItem>
@@ -61,7 +50,7 @@
                     <asp:TreeNode Text="Brakes, Steering, Suspension" Value="Brakes, Steering, Suspension">
                         <asp:TreeNode Text="Brakes" Value="Brakes">
                             <asp:TreeNode Text="Rotors" Value="Rotors"></asp:TreeNode>
-                            <asp:TreeNode Text="Brake Pads &amp; Shoes" Value="Brake Pads &amp; Shoes"></asp:TreeNode>
+                            <asp:TreeNode Text="Brake Pads and Shoes" Value="Brake Pads and Shoes"></asp:TreeNode>
                             <asp:TreeNode Text="Brake Calipers" Value="Brake Calipers"></asp:TreeNode>
                         </asp:TreeNode>
                     </asp:TreeNode>
@@ -70,9 +59,23 @@
                 <ParentNodeStyle Font-Bold="False" />
                 <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
             </asp:TreeView>
-        
-          
-    </asp:Panel>
+
 </div>
 
+            <div style="width= 60%;float:right">
+     <br />
+
+    <h2>Seach using TaxiD</h2>
+    <h2>
+        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Button ID="Button1" runat="server" Text="Get" />
+    </h2>
+    <p>
+        <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="558px" />
+    </p>
+        <p>Your app description page.</p>
+    <p>Use this area to provide additional information.</p>
+    </div>
+
+        </div>
 </asp:Content>
