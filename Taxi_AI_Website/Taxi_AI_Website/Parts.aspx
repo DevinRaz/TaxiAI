@@ -62,7 +62,7 @@
 
 </div>
 
-            <div style="width= 60%;float:right">
+            <div style="left: ;">
      <br />
 
     <h2>Seach using TaxiD</h2>
@@ -73,8 +73,6 @@
     <p>
         <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="558px" />
     </p>
-        <p>Your app description page.</p>
-    <p>Use this area to provide additional information.</p>
     </div>
 
         </div>
