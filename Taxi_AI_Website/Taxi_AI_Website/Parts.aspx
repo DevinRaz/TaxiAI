@@ -71,7 +71,7 @@
         <asp:Button ID="Button1" runat="server" Text="Get" />
     </h2>
     <p>
-        <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="558px" />
+        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
     </p>
     </div>
 

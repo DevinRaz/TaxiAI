@@ -13,35 +13,9 @@ Namespace Controllers
         ' GET: api/Parts/5
         Public Function GetValue(ByVal id As String) As String
             Dim TaxiAI As New TaxiDB("TaxiAPI", "vjM9vo9HYh^D9$*D")
-
-            '    Dim CarInfo() As IEnumerable(Of String)
-
             Dim temp As DataTable = TaxiAI.QueryRetDT(Queries.GetPartInfo(id))
 
-            Dim PartVals As New Dictionary(Of String, String)
-
-            If temp.Rows.Count >= 1 Then
-                For Each col As DataColumn In temp.Columns
-                    Dim ColumnName As String = col.ColumnName
-                    Dim ColumnValue As String
-                    Try
-                        ColumnValue = temp.Rows.Item(0).Item(col)
-                    Catch ex As Exception
-                        ColumnValue = ""
-                    End Try
-                    PartVals.Add(ColumnName, ColumnValue)
-                Next
-            End If
-
-            Dim json As String = "{'Parts':[{"
-
-            For Each cval In PartVals
-                json &= "'" & cval.Key & "':'" & cval.Value & "',"
-            Next
-
-            json = json.Substring(0, json.Length - 1)
-
-            json &= "}]}"
+            Dim json As String = TaxiAI.DatatabletoJSON(temp)
 
             Return json
         End Function

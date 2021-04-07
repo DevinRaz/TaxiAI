@@ -50,11 +50,11 @@ Partial Public Class Parts
     Protected WithEvents Button1 As Global.System.Web.UI.WebControls.Button
 
     '''<summary>
-    '''imgCar control.
+    '''Label1 control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents imgCar As Global.System.Web.UI.WebControls.Image
+    Protected WithEvents Label1 As Global.System.Web.UI.WebControls.Label
 End Class
