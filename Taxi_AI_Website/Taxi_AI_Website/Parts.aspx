@@ -4,7 +4,7 @@
       <h2><%: Title %></h2>
     <div style="height:700px">
 
-    <div style="width=30%;float:left">
+    <div style="width=30%;float:left; margin-left: 2.5%; margin-right: 2.5%;">
         <br />
 
     <label>Model</label>
