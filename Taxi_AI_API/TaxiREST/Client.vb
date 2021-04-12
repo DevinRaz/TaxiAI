@@ -21,6 +21,34 @@ Public Class Client
 
     End Function
 
+    Public Function CarSearch(ID As String) As Vehicle()
+        Dim Value As String = RESTGet("http://taxiai.razberry.network:2999/api/fleet/" & ID)
+        If Value = "null" Then
+            Return Nothing
+        End If
+        Dim FoundCars As Vehicle() = JsonConvert.DeserializeObject(Of Vehicle())(Value)
+        If FoundCars.Count > 0 Then
+            Return FoundCars
+        Else
+            Return Nothing
+        End If
+
+    End Function
+
+    Public Function PartSearch(ID As String) As Part()
+        Dim Value As String = RESTGet("http://taxiai.razberry.network:2999/api/part/" & ID)
+        If Value = "null" Then
+            Return Nothing
+        End If
+        Dim FoundCars As Part() = JsonConvert.DeserializeObject(Of Part())(Value)
+        If FoundCars.Count > 0 Then
+            Return FoundCars
+        Else
+            Return Nothing
+        End If
+
+    End Function
+
     Public Function GetPartFromID(ID As String) As Part
         Dim Value As String = RESTGet("http://taxiai.razberry.network:2999/api/parts/" & ID)
         If Value = "null" Then

@@ -5,35 +5,20 @@ Namespace Controllers
     Public Class PartsController
         Inherits ApiController
 
-        ' GET: api/Parts
-        Public Function GetValues() As IEnumerable(Of String)
-            Return New String() {"value1", "value2"}
-        End Function
 
-        ' GET: api/Parts/5
-        Public Function GetValue(ByVal id As String) As String
+        ' EX http://localhost:59922/api/parts/Search/?partno=%25104%25
+
+        <HttpGet>
+        <Route("api/parts/Search/{partno?}/{partsum?}/{partdescription?}/{manufacturer?}/{model?}/{partid?}/{category?}")>
+        Public Function GetValue(ByVal Optional partno As String = "%", ByVal Optional partsum As String = "%", ByVal Optional partdescription As String = "%", ByVal Optional manufacturer As String = "%", ByVal Optional storeid As String = "%", ByVal Optional model As String = "%", ByVal Optional partid As String = "%", ByVal Optional category As String = "%") As String
             Dim TaxiAI As New TaxiDB("TaxiAPI", "vjM9vo9HYh^D9$*D")
-            Dim temp As DataTable = TaxiAI.QueryRetDT(Queries.GetPartInfo(id))
+            Dim temp As DataTable = TaxiAI.QueryRetDT(Queries.SearchParts(partid, partsum, partdescription, manufacturer, model, partno, category))
 
             Dim json As String = TaxiAI.DatatabletoJSON(temp)
 
             Return json
         End Function
 
-
-        ' POST: api/Parts
-        Public Sub PostValue(<FromBody()> ByVal value As String)
-
-        End Sub
-
-        ' PUT: api/Parts/5
-        Public Sub PutValue(ByVal id As Integer, <FromBody()> ByVal value As String)
-
-        End Sub
-
-        ' DELETE: api/Parts/5
-        Public Sub DeleteValue(ByVal id As Integer)
-
-        End Sub
     End Class
+
 End Namespace
