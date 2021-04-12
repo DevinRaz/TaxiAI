@@ -11,7 +11,7 @@
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h2><%: Title %></h2>
     <h2>Search for a Car</h2>
-    <h2>
+    <h4>
         <asp:Label ID="Label5" runat="server" Text="Taxi-ID:"></asp:Label>
         <asp:TextBox ID="id" runat="server"></asp:TextBox> <br />
         <asp:Label ID="Label6" runat="server" Text="VIN:"></asp:Label>
@@ -35,7 +35,7 @@
 
 
         <asp:Button ID="Button1" runat="server" Text="Get" />
-    </h2>
+    </h4>
     <p>
         <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="455px" />
         <br __designer:mapid="4a" />
