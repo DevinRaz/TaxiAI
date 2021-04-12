@@ -67,12 +67,43 @@
 
     <h2>Seach using TaxiD</h2>
     <h2>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:Label ID="Label1" runat="server" Text="Part #:"></asp:Label>
+        <asp:TextBox ID="part_no" runat="server"></asp:TextBox><br />
+        <asp:Label ID="Label2" runat="server" Text="TaxiAi Part ID:"></asp:Label>
+        <asp:TextBox ID="part_id" runat="server"></asp:TextBox><br />
+        <asp:Label ID="Label3" runat="server" Text="Part Category:"></asp:Label>
+        <asp:DropDownList ID="category" runat="server">
+            <asp:ListItem></asp:ListItem>
+            <asp:ListItem>Air Filter</asp:ListItem>
+            <asp:ListItem>Brake Calipers</asp:ListItem>
+            <asp:ListItem>Brake Pads and Shoes</asp:ListItem>
+            <asp:ListItem>Front Lights</asp:ListItem>
+            <asp:ListItem>Headlamps</asp:ListItem>
+            <asp:ListItem>Rear Body Side Lights</asp:ListItem>
+            <asp:ListItem>Rear Center Lights</asp:ListItem>
+            <asp:ListItem>Rear License Light</asp:ListItem>
+            <asp:ListItem>Rear Liftgate Light</asp:ListItem>
+            <asp:ListItem>Rear Reflex Light</asp:ListItem>
+            <asp:ListItem>Rear Stop/Tail/Turn Light</asp:ListItem>
+            <asp:ListItem>Rotors</asp:ListItem>
+            <asp:ListItem>Turn/Fog Light</asp:ListItem>
+            <asp:ListItem>Wiper Arm</asp:ListItem>
+            <asp:ListItem>Wiper Blade</asp:ListItem>
+        </asp:DropDownList>
+        <br />
+        <asp:Label ID="Label4" runat="server" Text="Compatible Model:"></asp:Label>
+        <asp:DropDownList ID="compatible_model" runat="server">
+            <asp:ListItem></asp:ListItem>
+            <asp:ListItem>S</asp:ListItem>
+            <asp:ListItem>3</asp:ListItem>
+            <asp:ListItem>X</asp:ListItem>
+            <asp:ListItem>Y</asp:ListItem>
+        </asp:DropDownList>
+        <br />
+        
         <asp:Button ID="Button1" runat="server" Text="Get" />
     </h2>
-    <p>
-        <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    </p>
+
     </div>
 
         </div>
