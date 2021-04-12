@@ -86,6 +86,17 @@ Public Class TaxiDB
         Return RetVal
     End Function
 
+    Public Function DatatabletoJSON(DT As DataTable) As String
+        Dim retval As String
+        Try
+            retval = Newtonsoft.Json.JsonConvert.SerializeObject(DT)
+        Catch ex As Exception
+
+        End Try
+
+        Return retval
+    End Function
+
     Public Sub Open()
         Try
             Console.WriteLine("Opening Database Connection")

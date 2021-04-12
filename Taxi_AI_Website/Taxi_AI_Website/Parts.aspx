@@ -1,23 +1,12 @@
 ﻿<%@ Page Title="Parts" Language="VB" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Parts.aspx.vb" Inherits="Taxi_AI_Website.Parts" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <div style="width= 60%">
-     <br />
-    <h2><%: Title %>Parts</h2>
-    <h2>Seach using TaxiD</h2>
-    <h2>
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-        <asp:Button ID="Button1" runat="server" Text="Get" />
-    </h2>
-    <p>
-        <asp:Image ID="imgCar" runat="server" Height="215px" ImageUrl="Images/Model3-Trans.png" Visible="False" Width="558px" />
-    </p>
-        <p>Your app description page.</p>
-    <p>Use this area to provide additional information.</p>
-    </div>
-    <div style="width=30%;">
+      <h2><%: Title %></h2>
+    <div style="height:700px">
+
+    <div style="width=30%;float:left; margin-left: 2.5%; margin-right: 2.5%;">
         <br />
-    <asp:Panel ID="Panel1" runat="server" Height="105px">
+
     <label>Model</label>
             <asp:RadioButtonList ID="RadioButtonList1" runat="server">
                 <asp:ListItem>S</asp:ListItem>
@@ -61,7 +50,7 @@
                     <asp:TreeNode Text="Brakes, Steering, Suspension" Value="Brakes, Steering, Suspension">
                         <asp:TreeNode Text="Brakes" Value="Brakes">
                             <asp:TreeNode Text="Rotors" Value="Rotors"></asp:TreeNode>
-                            <asp:TreeNode Text="Brake Pads &amp; Shoes" Value="Brake Pads &amp; Shoes"></asp:TreeNode>
+                            <asp:TreeNode Text="Brake Pads and Shoes" Value="Brake Pads and Shoes"></asp:TreeNode>
                             <asp:TreeNode Text="Brake Calipers" Value="Brake Calipers"></asp:TreeNode>
                         </asp:TreeNode>
                     </asp:TreeNode>
@@ -70,9 +59,52 @@
                 <ParentNodeStyle Font-Bold="False" />
                 <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
             </asp:TreeView>
-        
-          
-    </asp:Panel>
+
 </div>
 
+            <div style="left: ;">
+     <br />
+
+    <h2>Seach using TaxiD</h2>
+    <h2>
+        <asp:Label ID="Label1" runat="server" Text="Part #:"></asp:Label>
+        <asp:TextBox ID="part_no" runat="server"></asp:TextBox><br />
+        <asp:Label ID="Label2" runat="server" Text="TaxiAi Part ID:"></asp:Label>
+        <asp:TextBox ID="part_id" runat="server"></asp:TextBox><br />
+        <asp:Label ID="Label3" runat="server" Text="Part Category:"></asp:Label>
+        <asp:DropDownList ID="category" runat="server">
+            <asp:ListItem></asp:ListItem>
+            <asp:ListItem>Air Filter</asp:ListItem>
+            <asp:ListItem>Brake Calipers</asp:ListItem>
+            <asp:ListItem>Brake Pads and Shoes</asp:ListItem>
+            <asp:ListItem>Front Lights</asp:ListItem>
+            <asp:ListItem>Headlamps</asp:ListItem>
+            <asp:ListItem>Rear Body Side Lights</asp:ListItem>
+            <asp:ListItem>Rear Center Lights</asp:ListItem>
+            <asp:ListItem>Rear License Light</asp:ListItem>
+            <asp:ListItem>Rear Liftgate Light</asp:ListItem>
+            <asp:ListItem>Rear Reflex Light</asp:ListItem>
+            <asp:ListItem>Rear Stop/Tail/Turn Light</asp:ListItem>
+            <asp:ListItem>Rotors</asp:ListItem>
+            <asp:ListItem>Turn/Fog Light</asp:ListItem>
+            <asp:ListItem>Wiper Arm</asp:ListItem>
+            <asp:ListItem>Wiper Blade</asp:ListItem>
+        </asp:DropDownList>
+        <br />
+        <asp:Label ID="Label4" runat="server" Text="Compatible Model:"></asp:Label>
+        <asp:DropDownList ID="compatible_model" runat="server">
+            <asp:ListItem></asp:ListItem>
+            <asp:ListItem>S</asp:ListItem>
+            <asp:ListItem>3</asp:ListItem>
+            <asp:ListItem>X</asp:ListItem>
+            <asp:ListItem>Y</asp:ListItem>
+        </asp:DropDownList>
+        <br />
+        
+        <asp:Button ID="Button1" runat="server" Text="Get" />
+    </h2>
+
+    </div>
+
+        </div>
 </asp:Content>

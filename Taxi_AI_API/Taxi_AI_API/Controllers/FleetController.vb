@@ -14,27 +14,9 @@ Namespace Controllers
         Public Function GetValue(ByVal id As String) As String
             Dim TaxiAI As New TaxiDB("TaxiAPI", "vjM9vo9HYh^D9$*D")
 
-            '    Dim CarInfo() As IEnumerable(Of String)
-
             Dim temp As DataTable = TaxiAI.QueryRetDT(Queries.GetCarInfo(id))
 
-            Dim CarVals As New Dictionary(Of String, String)
-
-            If temp.Rows.Count >= 1 Then
-                For Each col As DataColumn In temp.Columns
-                    CarVals.Add(col.ColumnName, temp.Rows.Item(0).Item(col))
-                Next
-            End If
-
-            Dim json As String = "{'Vehicles':[{"
-
-            For Each cval In CarVals
-                json &= "'" & cval.Key & "':'" & cval.Value & "',"
-            Next
-
-            json = json.Substring(0, json.Length - 1)
-
-            json &= "}]}"
+            Dim json As String = TaxiAI.DatatabletoJSON(temp)
 
             Return json
         End Function

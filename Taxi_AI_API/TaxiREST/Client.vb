@@ -9,51 +9,30 @@ Public Class Client
 
     Public Function GetCarFromID(ID As String) As Vehicle
         Dim Value As String = RESTGet("http://taxiai.razberry.network:2999/api/fleet/" & ID)
-        Return JSONtoVehicle(Value)
+        If Value = "null" Then
+            Return Nothing
+        End If
+        Dim FoundCars As Vehicle() = JsonConvert.DeserializeObject(Of Vehicle())(Value)
+        If FoundCars.Count > 0 Then
+            Return FoundCars.First
+        Else
+            Return Nothing
+        End If
+
     End Function
 
     Public Function GetPartFromID(ID As String) As Part
         Dim Value As String = RESTGet("http://taxiai.razberry.network:2999/api/parts/" & ID)
-        Return JSONtoPart(Value)
-    End Function
-
-
-
-
-    Public Function JSONtoVehicle(JSON As String) As Vehicle
-        Dim Empty As String = "{'Vehicles':[}]}"
-        JSON = JSON.Replace("""", "")
-
-        If JSON = Empty Then
+        If Value = "null" Then
             Return Nothing
         End If
-
-        Dim result = JsonConvert.DeserializeObject(JSON)
-
-        Dim rescar = result("Vehicles")(0)
-
-        Dim retCar As New Vehicle(rescar("id"), rescar("vin"), rescar("make"), rescar("model"), rescar("color"), rescar("plate"), rescar("location"), rescar("battery"), rescar("status"), rescar("odometer"))
-
-        Return retCar
-    End Function
-
-
-    Public Function JSONtoPart(JSON As String) As Part
-        Dim Empty As String = "{'Parts':[}]}"
-        JSON = JSON.Replace("""", "")
-
-        If JSON = Empty Then
+        Dim FoundParts As Part() = JsonConvert.DeserializeObject(Of Part())(Value)
+        If FoundParts.Count > 0 Then
+            Return FoundParts.First
+        Else
             Return Nothing
         End If
-
-        Dim result = JsonConvert.DeserializeObject(JSON)
-
-        Dim rescar = result("Parts")(0)
-        Dim retCar As New Part(rescar("part_id"), rescar("part_summary"), rescar("part_description"), rescar("compatible_model"), rescar("manufacturer"))
-
-        Return retCar
     End Function
-
 
 
     Public Function RESTGet(URL) As String
@@ -69,6 +48,8 @@ Public Class Client
             Dim Stream As Stream = origResponse.GetResponseStream()
             Dim sr As New StreamReader(Stream, Encoding.GetEncoding("utf-8"))
             Dim str As String = sr.ReadToEnd()
+            str = str.Substring(1, str.Length - 2).Replace("\""", """")
+
             Return str
         Catch ex As WebException
             Console.WriteLine(ex.Message)
@@ -76,7 +57,19 @@ Public Class Client
         End Try
     End Function
 
-    Class Vehicle
+    Public Class Part
+        Public Property part_no As String
+        Public Property part_summary As String
+        Public Property part_description As String
+        Public Property qty As String
+        Public Property manufacturer As String
+        Public Property store_id As String
+        Public Property compatible_model As String
+        Public Property part_id As String
+        Public Property category As String
+    End Class
+
+    Public Class Vehicle
         Public Property ID As Integer
         Public Property VIN As String
         Public Property Make As String
@@ -87,40 +80,7 @@ Public Class Client
         Public Property Location As String
         Public Property Status As String
         Public Property Odometer As Double
-        Sub New(id, vin, make, model, color, plate, location, battery, status, odometer)
-            _ID = id
-            _VIN = vin
-            _Make = make
-            _Model = model
-            _Color = color
-            _Plate = plate
-            _Location = location
-            _Battery = battery
-            _Status = status
-            _Odometer = odometer
-        End Sub
-
-
     End Class
 
-    Class Location
-
-    End Class
-
-    Class Part
-        Public Property ID As Integer
-        Public Property Summary As String
-        Public Property Description As String
-        Public Property Manufactuerer As String
-        Public Property Models As String
-
-        Sub New(id, sum, desc, model, mfg)
-            _ID = id
-            _Summary = sum
-            _Description = desc
-            _Models = model
-            _Manufactuerer = mfg
-        End Sub
-    End Class
 
 End Class
