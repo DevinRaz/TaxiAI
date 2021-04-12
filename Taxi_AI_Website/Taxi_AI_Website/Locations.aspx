@@ -32,7 +32,7 @@
     <hr />
     <h2 style="text-align:center; display:inline-block; width: 99%; font-weight:bold">TaxiAi Interior and Exterior Detailing</h2>
         <p>We route our taxi's to our local super charging station at <a href="https://www.google.com/maps/place/81+Mill+St,+Rochester,+MI+48307/@42.6775788,-83.1347124,17z/data=!3m1!4b1!4m5!3m4!1s0x8824e9c801cf4871:0x3f5ac62b6abf855a!8m2!3d42.6775788!4d-83.1325237"
-        >81 Mill Street, Rochester, MI 48307.</a> This is where our taxis undergo services such as: Door and Body Replacement, Side Mirror and Door Handle Car, AC and Sound System, and Exterior and Interior Painting. </p>
+        >81 Mill Street, Rochester, MI 48307.</a> This is where our taxis undergo services such as: Door and Body replacement, Side Mirror and Door Handle replacement, AC and Sound System repair, and Exterior and Interior Painting. </p>
     <img src="Images/Detailing.jpg" alt="Alternate Text" width="100%"  height="100%" style="margin-bottom:50px"/>
 
 
