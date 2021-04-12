@@ -6,7 +6,7 @@
 
     <div style="width=30%;float:left; margin-left: 2.5%; margin-right: 2.5%;">
         <br />
-
+<h4>
     <label>Model</label>
             <asp:RadioButtonList ID="RadioButtonList1" runat="server">
                 <asp:ListItem>S</asp:ListItem>
@@ -59,14 +59,14 @@
                 <ParentNodeStyle Font-Bold="False" />
                 <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
             </asp:TreeView>
-
+    <h4 />
 </div>
 
             <div style="left: ;">
      <br />
 
     <h2>Seach using TaxiD</h2>
-    <h2>
+    <h4>
         <asp:Label ID="Label1" runat="server" Text="Part #:"></asp:Label>
         <asp:TextBox ID="part_no" runat="server"></asp:TextBox><br />
         <asp:Label ID="Label2" runat="server" Text="TaxiAi Part ID:"></asp:Label>
@@ -102,7 +102,7 @@
         <br />
         
         <asp:Button ID="Button1" runat="server" Text="Get" />
-    </h2>
+    </h4>
 
     </div>
 
