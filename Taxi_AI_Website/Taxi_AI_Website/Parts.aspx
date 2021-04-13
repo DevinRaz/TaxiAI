@@ -65,7 +65,7 @@
             <div style="left: ;">
      <br />--%>
 
-    <h2>Seach using TaxiD</h2>
+    <h2>Seach for Parts</h2>
     <p>
         <asp:Label ID="Label1" runat="server" Text="Part #:"></asp:Label>
         <asp:TextBox ID="part_no" runat="server"></asp:TextBox>
