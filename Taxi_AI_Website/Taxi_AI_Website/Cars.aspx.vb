@@ -9,7 +9,7 @@
     End Sub
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
-        BindGrid(TaxiAPI.CarSearch(vin.Text, plate.Text, make.Text, model.Text, color.Text).ToList)
+        BindGrid(TaxiAPI.CarSearch(vin.Text, plate.Text, "", model.Text, color.Text).ToList)
     End Sub
 
     Private Sub BindGrid(ByVal Vehicles As List(Of TaxiREST.Client.Vehicle))
