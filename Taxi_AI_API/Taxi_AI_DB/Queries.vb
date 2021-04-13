@@ -35,7 +35,7 @@ Public Structure Queries
         cmd.Parameters.AddWithValue("make", make)
         cmd.Parameters.AddWithValue("model", model)
         cmd.Parameters.AddWithValue("color", color)
-        cmd.Parameters.AddWithValue("plate", model)
+        cmd.Parameters.AddWithValue("plate", plate)
 
         Return cmd
     End Function
