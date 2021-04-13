@@ -23,23 +23,24 @@ Public Class Client
 
     Public Function CarSearch(Vin As String, Plate As String, Make As String, Model As String, Color As String) As Vehicle()
         Dim RestURL As String = "http://taxiai.razberry.network:2999/api/cars/Search/"
+        Dim SearchParams As String = ""
         If Vin <> "" Then
-            RestURL &= "?vin=%25" & Vin & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "vin=%25" & Vin & "%25"
         End If
         If Plate <> "" Then
-            RestURL &= "?plate=%25" & Plate & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "plate=%25" & Plate & "%25"
         End If
         If Model <> "" Then
-            RestURL &= "?model=%25" & Model & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "model=%25" & Model & "%25"
         End If
         If Make <> "" Then
-            RestURL &= "?make=%25" & Make & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "make=%25" & Make & "%25"
         End If
         If Color <> "" Then
-            RestURL &= "?color=%25" & Color & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "color=%25" & Color & "%25"
         End If
 
-        Dim Value As String = RESTGet(RestURL)
+        Dim Value As String = RESTGet(RestURL & SearchParams)
         If Value = "null" Then
             Return Nothing
         End If
@@ -53,20 +54,21 @@ Public Class Client
 
     Public Function PartSearch(PartNum As String, Category As String, Model As String, PartDesc As String) As Part()
         Dim RestURL As String = "http://taxiai.razberry.network:2999/api/parts/Search/"
+        Dim SearchParams As String = ""
         If PartNum <> "" Then
-            RestURL &= "?partno=%25" & PartNum & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "partno=%25" & PartNum & "%25"
         End If
         If Category <> "" Then
-            RestURL &= "?category=%25" & Category & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "category=%25" & Category & "%25"
         End If
         If Model <> "" Then
-            RestURL &= "?model=%25" & Model & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "model=%25" & Model & "%25"
         End If
         If PartDesc <> "" Then
-            RestURL &= "?partdesc=%25" & PartDesc & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "partdesc=%25" & PartDesc & "%25"
         End If
 
-        Dim Value As String = RESTGet(RestURL)
+        Dim Value As String = RESTGet(RestURL & SearchParams)
         If Value = "null" Then
             Return Nothing
         End If
