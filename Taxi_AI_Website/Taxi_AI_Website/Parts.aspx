@@ -2,9 +2,9 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
       <h2><%: Title %></h2>
-    <div style="height:700px">
+  <%--   <div style="height:700px">
 
-    <div style="width=30%;float:left; margin-left: 2.5%; margin-right: 2.5%;">
+   <div style="width=30%;float:left; margin-left: 2.5%; margin-right: 2.5%;">
         <br />
 <h4>
     <label>Model</label>
@@ -63,14 +63,17 @@
 </div>
 
             <div style="left: ;">
-     <br />
+     <br />--%>
 
     <h2>Seach using TaxiD</h2>
-    <h4>
+    <p>
         <asp:Label ID="Label1" runat="server" Text="Part #:"></asp:Label>
-        <asp:TextBox ID="part_no" runat="server"></asp:TextBox><br />
-        <asp:Label ID="Label2" runat="server" Text="TaxiAi Part ID:"></asp:Label>
-        <asp:TextBox ID="part_id" runat="server"></asp:TextBox><br />
+        <asp:TextBox ID="part_no" runat="server"></asp:TextBox>
+ 
+        <asp:Label ID="Label5" runat="server" Text="Part Desc:"></asp:Label>
+        <asp:TextBox ID="part_desc" runat="server"></asp:TextBox>
+      
+          <br />
         <asp:Label ID="Label3" runat="server" Text="Part Category:"></asp:Label>
         <asp:DropDownList ID="category" runat="server">
             <asp:ListItem></asp:ListItem>
@@ -90,6 +93,7 @@
             <asp:ListItem>Wiper Arm</asp:ListItem>
             <asp:ListItem>Wiper Blade</asp:ListItem>
         </asp:DropDownList>
+     
         <br />
         <asp:Label ID="Label4" runat="server" Text="Compatible Model:"></asp:Label>
         <asp:DropDownList ID="compatible_model" runat="server">
@@ -99,12 +103,33 @@
             <asp:ListItem>X</asp:ListItem>
             <asp:ListItem>Y</asp:ListItem>
         </asp:DropDownList>
+      
         <br />
         
         <asp:Button ID="Button1" runat="server" Text="Get" />
-    </h4>
+           
+              <asp:GridView ID="gvParts" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AutoGenerateColumns="False" Height="98px" Width="1318px">
+                        <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                        <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                        <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                        <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                        <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                        <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                        <SortedDescendingHeaderStyle BackColor="#242121" />
+                           <Columns>
+     <asp:BoundField DataField = "part_no" HeaderText = "Part No" />
+     <asp:BoundField DataField = "part_summary" HeaderText = "Part Summary" />
+     <asp:BoundField DataField = "part_description" HeaderText = "Part Description" />
+     <asp:BoundField DataField = "qty" HeaderText = "Quantity" />
+                                    <asp:BoundField DataField = "manufacturer" HeaderText = "Manufacturer" />
+                                    <asp:BoundField DataField = "store_id" HeaderText = "Store ID" />
+                                    <asp:BoundField DataField = "compatible_model" HeaderText = "Model" />
+                                    <asp:BoundField DataField = "part_id" HeaderText = "Part ID" />
+                                    <asp:BoundField DataField = "category" HeaderText = "Category" />
+  </Columns>
 
-    </div>
+                    </asp:GridView>
 
-        </div>
+
 </asp:Content>
