@@ -45,6 +45,12 @@
                         <SortedDescendingCellStyle BackColor="#E5E5E5" />
                         <SortedDescendingHeaderStyle BackColor="#242121" />
                            <Columns>
+                              
+                                    <asp:TemplateField>
+               <ItemTemplate>
+                   <asp:Image ID="imgID" runat="server" Height="150px" Width="300" />
+               </ItemTemplate>
+          </asp:TemplateField>
      <asp:BoundField DataField = "id" HeaderText = "TaxID" />
      <asp:BoundField DataField = "vin" HeaderText = "VIN" />
      <asp:BoundField DataField = "make" HeaderText = "Make" />

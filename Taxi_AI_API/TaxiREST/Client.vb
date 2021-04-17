@@ -130,6 +130,7 @@ Public Class Client
     End Class
 
     Public Class Vehicle
+
         Public Property ID As Integer
         Public Property VIN As String
         Public Property Make As String
@@ -140,6 +141,7 @@ Public Class Client
         Public Property Location As String
         Public Property Status As String
         Public Property Odometer As Double
+
     End Class
 
 

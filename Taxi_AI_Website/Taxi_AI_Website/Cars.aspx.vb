@@ -15,8 +15,16 @@
     Private Sub BindGrid(ByVal Vehicles As List(Of TaxiREST.Client.Vehicle))
         gvVehicles.DataSource = Vehicles
         gvVehicles.DataBind()
+        fixthumbs()
     End Sub
 
+    Sub fixthumbs()
+        For Each row As GridViewRow In gvVehicles.Rows
+            Dim Image As Image = row.Cells.Item(0).FindControl("imgID")
+            Image.ImageUrl = "~/Images/Model" & row.Cells.Item(4).Text & "-Trans.png"
+            Image.BackColor = Drawing.Color.FromName(row.Cells.Item(5).Text)
+        Next
+    End Sub
 
 
 End Class

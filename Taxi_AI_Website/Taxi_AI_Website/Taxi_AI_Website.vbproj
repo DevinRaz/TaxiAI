@@ -131,13 +131,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Car.aspx" />
     <Content Include="Images\AubrunHillsMap.jpg" />
     <Content Include="Images\Auto_Center.jpg" />
     <Content Include="Images\Detailing.jpg" />
     <Content Include="Images\Model3-Trans.png" />
     <Content Include="Images\Model3.png" />
     <Content Include="Images\ModelS.png" />
+    <Content Include="Images\ModelX-Trans.png" />
     <Content Include="Images\ModelX.png" />
+    <Content Include="Images\ModelY-Trans.png" />
     <Content Include="Images\ModelY.png" />
     <Content Include="Images\Superchargers1.jpg" />
     <Content Include="Locations.aspx" />
@@ -203,6 +206,13 @@
     </Compile>
     <Compile Include="About.aspx.vb">
       <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Car.aspx.designer.vb">
+      <DependentUpon>Car.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Car.aspx.vb">
+      <DependentUpon>Car.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Locations.aspx.designer.vb">
