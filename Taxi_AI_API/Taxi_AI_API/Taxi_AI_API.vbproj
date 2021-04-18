@@ -121,7 +121,6 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.vb" />
     <Compile Include="Controllers\FleetController.vb" />
-    <Compile Include="Controllers\LocationController.vb" />
     <Compile Include="Controllers\PartsController.vb" />
     <Compile Include="Global.asax.vb">
       <DependentUpon>Global.asax</DependentUpon>
