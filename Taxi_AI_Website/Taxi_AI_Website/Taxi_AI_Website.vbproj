@@ -135,6 +135,7 @@
     <Content Include="Images\AubrunHillsMap.jpg" />
     <Content Include="Images\Auto_Center.jpg" />
     <Content Include="Images\Detailing.jpg" />
+    <Content Include="Images\doorhandle.jpg" />
     <Content Include="Images\Model3-Trans.png" />
     <Content Include="Images\Model3.png" />
     <Content Include="Images\ModelS.png" />
@@ -142,6 +143,7 @@
     <Content Include="Images\ModelX.png" />
     <Content Include="Images\ModelY-Trans.png" />
     <Content Include="Images\ModelY.png" />
+    <Content Include="Images\steeringwheel.jpg" />
     <Content Include="Images\Superchargers1.jpg" />
     <Content Include="Locations.aspx" />
     <Content Include="Parts.aspx" />
