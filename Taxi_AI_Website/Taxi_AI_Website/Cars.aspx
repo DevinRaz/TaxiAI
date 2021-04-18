@@ -9,8 +9,8 @@
 
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <h2><%: Title %></h2>
-    <h2>Search for a Car</h2>
+    <h1>Our Taxi Inventory</h1>
+    <h2>Search for a Taxi</h2>
     <p>
         <asp:Label ID="Label6" runat="server" Text="VIN:"></asp:Label>
         <asp:TextBox ID="vin" runat="server"></asp:TextBox><br />
