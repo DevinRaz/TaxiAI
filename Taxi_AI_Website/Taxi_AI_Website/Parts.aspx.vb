@@ -10,6 +10,11 @@
 
     Protected Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         BindGrid(TaxiAPI.PartSearch(part_no.Text, category.Text, compatible_model.Text, part_desc.Text).ToList)
+        If gvParts.Rows.Count = 0 Then
+            Label2.Text = "No Results Found"
+        Else
+            Label2.Text = ""
+        End If
     End Sub
 
 
@@ -18,6 +23,7 @@
         gvParts.DataBind()
     End Sub
 
+    Protected Sub gvParts_SelectedIndexChanged(sender As Object, e As EventArgs) Handles gvParts.SelectedIndexChanged
 
-
+    End Sub
 End Class

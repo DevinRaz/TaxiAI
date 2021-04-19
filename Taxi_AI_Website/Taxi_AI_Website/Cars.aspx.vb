@@ -16,6 +16,11 @@
         gvVehicles.DataSource = Vehicles
         gvVehicles.DataBind()
         fixthumbs()
+        If gvVehicles.Rows.Count = 0 Then
+            Label1.Text = "No Results Found"
+        Else
+            Label1.Text = ""
+        End If
     End Sub
 
     Sub fixthumbs()

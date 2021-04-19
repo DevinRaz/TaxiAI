@@ -41,9 +41,8 @@
         <div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                     <div class="navbar-header">
-                         <asp:Image ID="Image1" runat="server" Height="60px" href="~/Default" ImageUrl="~/favicon.ico" Width="60px" BackColor="#222222"  />
-            
-                    <a class="navbar-brand" runat="server" href="~/">
+                    <asp:Image ID="Image1" runat="server" Height="60px" href="~/" ImageUrl="~/favicon.ico" Width="60px" BackColor="#222222"  />
+                    <a class="navbar-brand" runat="server" href="~/">TaxiAI</a>
                    
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                         <span class="icon-bar"></span>
