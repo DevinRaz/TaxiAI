@@ -65,7 +65,7 @@ Public Class Client
             SearchParams &= If(SearchParams = "", "?", "&") & "model=%25" & Model & "%25"
         End If
         If PartDesc <> "" Then
-            SearchParams &= If(SearchParams = "", "?", "&") & "partdesc=%25" & PartDesc & "%25"
+            SearchParams &= If(SearchParams = "", "?", "&") & "partdescription=%25" & PartDesc & "%25"
         End If
 
         Dim Value As String = RESTGet(RestURL & SearchParams)
