@@ -12,27 +12,43 @@
     <h1>Our Taxi Inventory</h1>
     <h2>Search for a Taxi</h2>
     <p>
-        <asp:Label ID="Label6" runat="server" Text="VIN:"></asp:Label>
-        <asp:TextBox ID="vin" runat="server"></asp:TextBox><br />
-         <asp:Label ID="Label10" runat="server" Text="License Plate #:"></asp:Label>
-        <asp:TextBox ID="plate" runat="server"></asp:TextBox><br />
-        <asp:Label ID="Label7" runat="server" Text="Make:"></asp:Label>
-        <asp:DropDownList ID="make" runat="server">
+        <asp:Table runat="server">
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label6" runat="server" Text="VIN:"></asp:Label></asp:TableCell>
+        <asp:TableCell><asp:TextBox ID="vin" runat="server"></asp:TextBox></asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label10" runat="server" Text="License Plate #:"></asp:Label></asp:TableCell>
+        <asp:TableCell><asp:TextBox ID="plate" runat="server"></asp:TextBox></asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label2" runat="server" Text="Make:"></asp:Label></asp:Label></asp:TableCell>
+        <asp:TableCell>
+            <asp:DropDownList ID="make" runat="server">
             <asp:ListItem Selected="True">Tesla</asp:ListItem>
-        </asp:DropDownList> <br />
-        <asp:Label ID="Label8" runat="server" Text="Model:"></asp:Label>
-        <asp:DropDownList ID="model" runat="server">
+        </asp:DropDownList>
+        </asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label8" runat="server" Text="Model:"></asp:Label></asp:Label></asp:TableCell>
+        <asp:TableCell>
+            <asp:DropDownList ID="model" runat="server">
             <asp:ListItem></asp:ListItem>
             <asp:ListItem>S</asp:ListItem>
             <asp:ListItem>3</asp:ListItem>
             <asp:ListItem>X</asp:ListItem>
             <asp:ListItem>Y</asp:ListItem>
-        </asp:DropDownList><br />
-        <asp:Label ID="Label9" runat="server" Text="Color:"></asp:Label>
-        <asp:TextBox ID="color" runat="server"></asp:TextBox> <br />
-
-
-        <asp:Button ID="Button1" runat="server" Text="Get" />
+        </asp:DropDownList>
+        </asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label9" runat="server" Text="Color:"></asp:Label></asp:Label></asp:TableCell>
+        <asp:TableCell><asp:TextBox ID="color" runat="server"></asp:TextBox></asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+        <asp:TableCell><asp:Button ID="Button2" runat="server" Text="Get" /></asp:TableCell>
+        </asp:TableRow>        
+        </asp:Table>
         <br />
            
               <asp:GridView ID="gvVehicles" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AutoGenerateColumns="False" Height="98px" Width="1318px">
