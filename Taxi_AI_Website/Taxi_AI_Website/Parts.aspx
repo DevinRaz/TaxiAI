@@ -67,15 +67,19 @@
 
     <h2>Seach for Parts</h2>
     <p>
-        <asp:Label ID="Label1" runat="server" Text="Part #:"></asp:Label>
-        <asp:TextBox ID="part_no" runat="server"></asp:TextBox>
- 
-        <asp:Label ID="Label5" runat="server" Text="Part Desc:"></asp:Label>
-        <asp:TextBox ID="part_desc" runat="server"></asp:TextBox>
-      
-          <br />
-        <asp:Label ID="Label3" runat="server" Text="Part Category:"></asp:Label>
-        <asp:DropDownList ID="category" runat="server">
+        <asp:Table runat="server">
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label1" runat="server" Text="Part #:"></asp:Label></asp:TableCell>
+        <asp:TableCell><asp:TextBox ID="part_no" runat="server"></asp:TextBox></asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label5" runat="server" Text="Part Desc:"></asp:Label></asp:TableCell>
+        <asp:TableCell><asp:TextBox ID="part_desc" runat="server"></asp:TextBox></asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label3" runat="server" Text="Part Category:"></asp:Label></asp:TableCell>
+        <asp:TableCell>
+            <asp:DropDownList ID="category" runat="server">
             <asp:ListItem></asp:ListItem>
             <asp:ListItem>Air Filter</asp:ListItem>
             <asp:ListItem>Brake Calipers</asp:ListItem>
@@ -93,20 +97,24 @@
             <asp:ListItem>Wiper Arm</asp:ListItem>
             <asp:ListItem>Wiper Blade</asp:ListItem>
         </asp:DropDownList>
-     
-        <br />
-        <asp:Label ID="Label4" runat="server" Text="Compatible Model:"></asp:Label>
-        <asp:DropDownList ID="compatible_model" runat="server">
+        </asp:TableCell>
+        </asp:TableRow>
+        <asp:TableRow>
+        <asp:TableCell><asp:Label ID="Label4" runat="server" Text="Compatible Model:"></asp:Label></asp:TableCell>
+        <asp:TableCell>
+            <asp:DropDownList ID="compatible_model" runat="server">
             <asp:ListItem></asp:ListItem>
             <asp:ListItem>S</asp:ListItem>
             <asp:ListItem>3</asp:ListItem>
             <asp:ListItem>X</asp:ListItem>
             <asp:ListItem>Y</asp:ListItem>
         </asp:DropDownList>
-      
-        <br />
-        
-        <asp:Button ID="Button1" runat="server" Text="Get" />
+        </asp:TableCell>
+        </asp:TableRow>        
+        <asp:TableRow>
+        <asp:TableCell><asp:Button ID="Button1" runat="server" Text="Get" /></asp:TableCell>
+        </asp:TableRow>
+        </asp:Table>
            
               <asp:GridView ID="gvParts" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" AutoGenerateColumns="False" Height="98px" Width="1318px">
                         <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
