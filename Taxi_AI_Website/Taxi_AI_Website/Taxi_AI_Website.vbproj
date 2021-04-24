@@ -145,6 +145,7 @@
     <Content Include="Images\ModelY.png" />
     <Content Include="Images\steeringwheel.jpg" />
     <Content Include="Images\Superchargers1.jpg" />
+    <Content Include="Images\TaxiAI Mobile.png" />
     <Content Include="Locations.aspx" />
     <Content Include="Parts.aspx" />
     <Content Include="Cars.aspx" />
